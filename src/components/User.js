@@ -1,12 +1,16 @@
 import React from "react";
 import UserInfo from "./UserInfo";
 import UserDesc from "./UserDesc";
+import Container from 'react-bootstrap/Container';
 
 const User = () => {
   return(
     <React.Fragment>
-      <UserInfo/>
-      <UserDesc/>
+      <Container>
+        <UserInfo/>
+        <hr/>
+        <UserDesc/>
+      </Container>
     </React.Fragment>
   );
 };
