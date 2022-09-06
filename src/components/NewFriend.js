@@ -1,19 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-function NewFriend(props){
+function NewFriend(props) {
   return (
-    <React.Fragment>
-      <img src="" alt="friend"/>    
-      <h3>{props.name}</h3>
-      <button href="#">ADD FRIEND</button>
-      <hr/>
-    </React.Fragment>
+      <Card className="mt-2 shadow-lg p-1 mb-3 bg-white rounded" style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={props.img}/>
+        <Card.Body className="">
+          <Row>
+            <Col><Card.Title>{props.name}</Card.Title></Col>
+            <Col><Button className="btn btn-outline-success" variant="light" size="sm">Add Friend</Button></Col>
+          </Row>
+        </Card.Body>
+      </Card>
   );
 }
 
 NewFriend.propTypes = {
   name: PropTypes.string.isRequired,
+  img: PropTypes.string
 };
 
 export default NewFriend;
