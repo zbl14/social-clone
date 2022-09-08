@@ -1,6 +1,6 @@
 ## Component Diagram
 
-![Diagram](/componentDiagram.drawio.svg)
+![Diagram](/src/img/componentDiagram.drawio.svg)
 
 ## Available Scripts
 
